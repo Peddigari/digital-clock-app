@@ -1,10 +1,7 @@
-
-
-
- function formatTimeShow(h_24) {
+function formatTimeShow(h_24) {
    var h = h_24 % 12;
    if (h === 0) h = 12;
-   let str=""
+   let str="";
    if(h_24 >10){
       str="0"
    }
@@ -17,13 +14,9 @@ function currentTime() {
     let mm = date.getMinutes();
     let ss = date.getSeconds();
     let session = "AM";
-    console.log()
-   
-    console.log()
     if(hh > 12){
         session = "PM";
      }
-  
      hrs = (hh < 10) ? "0" + hh : hh;
      mins = (mm < 10) ? "0" + mm : mm;
      secs = (ss < 10) ? "0" + ss : ss;
@@ -86,6 +79,15 @@ function currentTime() {
 
   }
 
+  const onHoverCard=()=>{
+ let TextChange=  document.querySelector(".card2");
+TextChange.innerHTML="Party Time";
+  }
+
+  const ChangetoNormalText =()=>{
+   let TextChange=  document.querySelector(".card2");
+TextChange.innerHTML="Set Alarm";
+  }
 
 
 
